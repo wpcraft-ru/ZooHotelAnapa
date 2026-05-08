@@ -27,6 +27,9 @@ jobs:
         working-directory: docs/prototypes/zoohotel-anapa
       - run: npm run build
         working-directory: docs/prototypes/zoohotel-anapa
+        env:
+          ASTRO_SITE: https://wpcraft-ru.github.io
+          ASTRO_BASE: /ZooHotelAnapa/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs/prototypes/zoohotel-anapa/dist
