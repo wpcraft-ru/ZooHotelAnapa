@@ -68,7 +68,6 @@ import Layout from "../layouts/Layout.astro";
 							</ul>
 						</div>
 					</div>
-				</div>
 			</section>
 
 			<!-- ═══ 2. О НАС ═══ -->
@@ -149,7 +148,7 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 					</div>
 					<!-- Зоотакси карточка -->
-					<div class="border border-base-content/20 bg-base-200 p-5 max-w-md">
+					<div class="border border-base-content/20 bg-base-200 p-5 w-full">
 						<p class="font-mono text-xs uppercase tracking-widest text-base-content/50 mb-2">ЗООТАКСИ</p>
 						<div class="space-y-2 mt-3">
 							<div class="flex justify-between text-sm">
@@ -236,30 +235,24 @@ import Layout from "../layouts/Layout.astro";
 							Посмотрите, как живут наши гости. Больше фото — в наших соцсетях.
 						</p>
 					</div>
-					<div class="grid gap-3 md:grid-cols-4">
-						<div class="border border-base-content/20 bg-base-100 aspect-square flex items-center justify-center">
-							<div class="text-center text-base-content/40">
-								<p class="font-mono text-xs uppercase tracking-widest mb-1">ФОТО 1</p>
-								<p class="text-sm">Утеплённые домики</p>
-							</div>
+					<div class="grid gap-3 md:grid-cols-3" id="gallery-grid">
+						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
+							<img src="/gallery/house-interior.jpg" alt="Уютный утеплённый домик — собака отдыхает внутри" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/house-interior.jpg" />
 						</div>
-						<div class="border border-base-content/20 bg-base-100 aspect-square flex items-center justify-center">
-							<div class="text-center text-base-content/40">
-								<p class="font-mono text-xs uppercase tracking-widest mb-1">ФОТО 2</p>
-								<p class="text-sm">Просторные вольеры</p>
-							</div>
+						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
+							<img src="/gallery/guests.jpg" alt="Довольные гости зоогостиницы — две собаки на пороге" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/guests.jpg" />
 						</div>
-						<div class="border border-base-content/20 bg-base-100 aspect-square flex items-center justify-center">
-							<div class="text-center text-base-content/40">
-								<p class="font-mono text-xs uppercase tracking-widest mb-1">ФОТО 3</p>
-								<p class="text-sm">Наши гости</p>
-							</div>
+						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
+							<img src="/gallery/territory-1.jpg" alt="Территория зоогостиницы — собака на прогулке у дома" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/territory-1.jpg" />
 						</div>
-						<div class="border border-base-content/20 bg-base-100 aspect-square flex items-center justify-center">
-							<div class="text-center text-base-content/40">
-								<p class="font-mono text-xs uppercase tracking-widest mb-1">ФОТО 4</p>
-								<p class="text-sm">Территория</p>
-							</div>
+						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
+							<img src="/gallery/dog-walk.jpg" alt="Прогулка с собакой в лесу — активный отдых для питомцев" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/dog-walk.jpg" />
+						</div>
+						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
+							<img src="/gallery/cat-walk.jpg" alt="Кот на поводке — принимаем и кошек тоже" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/cat-walk.jpg" />
+						</div>
+						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
+							<img src="/gallery/territory-2.jpg" alt="Территория зоогостиницы — простор и свежий воздух" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/territory-2.jpg" />
 						</div>
 					</div>
 					<p class="text-sm text-base-content/50">
@@ -395,15 +388,15 @@ import Layout from "../layouts/Layout.astro";
 							<form class="space-y-4">
 								<div>
 									<label class="block text-sm font-medium mb-1">Имя *</label>
-									<input type="text" required class="input w-full border border-base-content/20 bg-base-100 rounded-none" placeholder="Ваше имя" />
+									<input type="text" required class="input w-full border border-base-content/20 bg-base-100" placeholder="Ваше имя" />
 								</div>
 								<div>
 									<label class="block text-sm font-medium mb-1">Телефон *</label>
-									<input type="tel" required class="input w-full border border-base-content/20 bg-base-100 rounded-none" placeholder="+7 (___) ___-__-__" />
+									<input type="tel" required class="input w-full border border-base-content/20 bg-base-100" placeholder="+7 (___) ___-__-__" />
 								</div>
 								<div>
 									<label class="block text-sm font-medium mb-1">Пожелания</label>
-									<textarea class="textarea w-full border border-base-content/20 bg-base-100 rounded-none" rows="3" placeholder="Какое животное, даты, особые пожелания..."></textarea>
+									<textarea class="textarea w-full border border-base-content/20 bg-base-100" rows="3" placeholder="Какое животное, даты, особые пожелания..."></textarea>
 								</div>
 								<label class="flex items-start gap-2 text-xs text-base-content/60">
 									<input type="checkbox" required class="mt-0.5" />
@@ -413,10 +406,60 @@ import Layout from "../layouts/Layout.astro";
 							</form>
 						</div>
 					</div>
+					<!-- Яндекс.Карта -->
+					<div class="border border-base-content/20 bg-base-200 overflow-hidden mt-8" style="min-height: 400px;">
+						<iframe
+							src="https://yandex.ru/map-widget/v1/?mode=search&text=ул.%20Фрунзе,%2064%2F2,%20Супсех,%20Анапа&z=16"
+							width="100%" height="400" frameborder="0" allowfullscreen style="border:0;"
+							title="Зоогостиница Анапа — ул. Фрунзе, 64/2, с. Супсех"
+							loading="lazy">
+						</iframe>
+					</div>
 				</div>
 			</section>
 
 		</main>
+
+		<!-- ═══ LIGHTBOX ═══ -->
+		<div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 p-4">
+			<button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl hover:text-primary transition-colors z-10" aria-label="Закрыть">&times;</button>
+			<img id="lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] object-contain" />
+		</div>
+
+		<script>
+			const lb = document.getElementById('lightbox');
+			const lbImg = document.getElementById('lightbox-img');
+			const lbClose = document.getElementById('lightbox-close');
+
+			function openLightbox(src, alt) {
+				lbImg.src = src;
+				lbImg.alt = alt;
+				lb.classList.remove('hidden');
+				lb.classList.add('flex');
+			}
+
+			function closeLightbox() {
+				lb.classList.add('hidden');
+				lb.classList.remove('flex');
+			}
+
+			document.querySelectorAll('.gallery-item').forEach(item => {
+				item.addEventListener('click', (e) => {
+					const img = item.querySelector('img');
+					openLightbox(img.dataset.full || img.src, img.alt);
+				});
+			});
+
+			lb.addEventListener('click', (e) => {
+				if (e.target === lb) closeLightbox();
+			});
+
+			lbClose.addEventListener('click', closeLightbox);
+
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape') closeLightbox();
+			});
+		</script>
 
 		<!-- ═══ FOOTER ═══ -->
 		<footer class="border-t border-base-content/20 bg-base-200 px-4 py-8 md:px-8">

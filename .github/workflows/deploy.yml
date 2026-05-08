@@ -24,14 +24,14 @@ jobs:
         with:
           node-version: 22
           cache: "npm"
-          cache-dependency-path: docs/prototypes/{{PROJECT_SLUG}}/package-lock.json
+          cache-dependency-path: docs/prototypes/zoohotel-anapa/package-lock.json
       - run: npm ci
-        working-directory: docs/prototypes/{{PROJECT_SLUG}}
+        working-directory: docs/prototypes/zoohotel-anapa
       - run: npm run build
-        working-directory: docs/prototypes/{{PROJECT_SLUG}}
+        working-directory: docs/prototypes/zoohotel-anapa
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/prototypes/{{PROJECT_SLUG}}/dist
+          path: ./docs/prototypes/zoohotel-anapa/dist
 
   deploy:
     needs: build

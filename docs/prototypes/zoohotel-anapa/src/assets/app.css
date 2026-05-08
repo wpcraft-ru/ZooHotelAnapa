@@ -10,23 +10,28 @@
 
 @plugin "daisyui";
 
-/* Design system: Зоогостиница Анапа — dark base with warm green accent */
+/* Design system: Зоогостиница Анапа — light warm palette with green accent */
 :root {
   /* primary: warm green — nature, comfort, animals */
   --color-primary: oklch(55% 0.16 150);
   --color-primary-content: oklch(100% 0 0);
-  /* base-100: dark charcoal background */
-  --color-base-100: oklch(15% 0.01 30);
-  /* base-200: dark blue surface for cards */
-  --color-base-200: oklch(20% 0.015 35);
-  /* base-300: slightly lighter for hover */
-  --color-base-300: oklch(26% 0.02 38);
-  /* base-content: light text on dark bg */
-  --color-base-content: oklch(92% 0.01 70);
-  --radius-btn: 0;
-  --radius-box: 0;
-  --radius-badge: 0;
-  --radius-field: 0;
+  /* base-100: warm cream background */
+  --color-base-100: oklch(97% 0.01 80);
+  /* base-200: warm beige surface for cards / alt sections */
+  --color-base-200: oklch(95% 0.01 75);
+  /* base-300: slightly darker for hover */
+  --color-base-300: oklch(90% 0.01 75);
+  /* base-content: dark text on light bg */
+  --color-base-content: oklch(25% 0 0);
+  --radius-btn: 0.5rem;
+  --radius-box: 0.75rem;
+  --radius-badge: 0.5rem;
+  --radius-field: 0.5rem;
+}
+
+/* Apply border-radius to all bordered blocks */
+.border {
+  border-radius: var(--radius-box);
 }
 
 /* Focus visible: primary ring */

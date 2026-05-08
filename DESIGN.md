@@ -7,7 +7,7 @@
 
 ## Context
 
-- **Проект:** {{PROJECT_NAME}} — {{PROJECT_ONE_LINER}}
+- **Проект:** Зоогостиница Анапа — Забота о вашем питомце, пока вы в отъезде
 - **Платформа:** Статический HTML-сайт (будет) / AstroJS прототипы
 - **Workflow:** При проработке дизайна любой страницы — детали сохраняются в RFC `./docs/rfc/` в формате md
 - **Конвенция:** Каждый RFC-файл описывает один page design с деталями, секциями, текстами
@@ -18,8 +18,8 @@
 
 ## Overview
 
-- **Стиль:** Современный лендинг — тёмная палитра, яркие акценты, чистая типографика
-- **Настроение:** Энергичное, профессиональное, гостеприимное
+- **Стиль:** Современный лендинг — светлая тёплая палитра, природные оттенки, чистая типографика
+- **Настроение:** Уютное, гостеприимное, природное — как загородный дом для питомцев
 - **Для кого:** смотри MARKETING.md — целевая аудитория
 
 ## Design Tokens
@@ -28,21 +28,21 @@
 
 ```yaml
 colors:
-  primary: "#43A047"     # основной акцент (CTA, выделения) — тёплый зелёный
-  primary-hover: "#388E3C"       # hover primary (темнее primary на ~15%)
-  secondary: "#FF8F00"           # вторичный акцент — янтарный/золотой
+  primary: "#43A047"            # основной акцент — тёплый зелёный (трава, природа)
+  primary-hover: "#388E3C"      # hover primary (темнее на ~15%)
+  secondary: "#FF8F00"          # вторичный акцент — янтарный/золотой (солнце, тепло)
   success: "#43A047"
   warning: "#FFA000"
   danger: "#E53935"
-  background: "#1A1A2E"       # тёмный charcoal — основной фон (#1A1A2E)
-  surface: "#16213E"     # тёмно-синий — фон карточек и секций (#16213E)
-  surface-alt: "#0F3460" # более светлый — для hover и акцентов (#0F3460)
-  text-primary: "#FFFFFF"        # белый — заголовки
-  text-secondary: "#E0E0E0"      # светло-серый — тело текста
-  text-tertiary: "#9E9E9E"       # серый — meta, muted
-  border: "#FFFFFF"              # белый бордер 1px (на тёмном фоне)
-  border-light: "#3A3A5C"       # тёмный приглушённый бордер
-  cta-text: "#FFFFFF"            # текст на CTA-кнопках
+  background: "#FFF8F0"         # тёплый кремовый — основной фон
+  surface: "#FFFFFF"            # белый — фон карточек и секций
+  surface-alt: "#F5F0EB"        # тёплый серо-бежевый — для hover и чередования секций
+  text-primary: "#2D2D2D"       # тёмно-серый — заголовки
+  text-secondary: "#5A5A5A"     # средне-серый — тело текста
+  text-tertiary: "#8A8A8A"      # светло-серый — meta, muted
+  border: "#E0D8CF"             # тёплый бежевый бордер
+  border-light: "#F0EBE5"       # очень светлый бордер
+  cta-text: "#FFFFFF"           # текст на CTA-кнопках (белый)
 ```
 
 ### Typography
@@ -133,7 +133,7 @@ rounded:
   none: "0px"
   sm: "4px"
   md: "8px"
-  lg: "10px"
+  lg: "12px"
   xl: "16px"
 ```
 
@@ -172,7 +172,7 @@ section-padding:
 button-primary:
   backgroundColor: "{colors.primary}"
   textColor: "#FFFFFF"
-  borderRadius: "0px"
+  borderRadius: "{rounded.md}"
   borderWidth: "1px"
   borderColor: "{colors.border}"
   padding: "12px 20px"
@@ -191,7 +191,7 @@ card:
   backgroundColor: "{colors.surface}"
   borderColor: "{colors.border}"
   borderWidth: "1px"
-  borderRadius: "0px"
+  borderRadius: "{rounded.md}"
   padding: "{spacing.xl}"
   gap: "{spacing.md}"
 ```
@@ -200,9 +200,10 @@ card:
 
 ```yaml
 section:
-  background-dark: "{colors.background}"
-  background-darker: "{colors.surface}"
-  borderColor: "{colors.border-light}"
+  background-light: "{colors.background}"
+  background-white: "{colors.surface}"
+  background-warm: "{colors.surface-alt}"
+  borderColor: "{colors.border}"
   borderWidth: "1px"
   padding: "28px"
   gap: "14px"
@@ -214,15 +215,15 @@ section:
 
 | # | Блок | Фон | Содержимое |
 |---|------|-----|------------|
-| 1 | Hero | background (#1A1A2E) | h1 + subtitle + meta-tags + буллеты + CTA |
-| 2 | О нас | surface (#16213E) | h2 + 3 карточки + CTA |
-| 3 | Продукты/Услуги | background (#1A1A2E) | h2 + 3 категории + CTA |
-| 4 | Ключевая фишка | surface (#16213E) | h2 + 4 stat-блока + CTA |
-| 5 | События/Процесс | background (#1A1A2E) | h2 + 3 карточки + CTA |
-| 6 | Галерея | surface (#16213E) | h2 + сетка фото + CTA |
-| 7 | Отзывы | background (#1A1A2E) | h2 + stats + цитаты + CTA |
-| 8 | FAQ | surface (#16213E) | h2 + аккордеон вопросов |
-| 9 | Контакты + Форма | background (#1A1A2E) | h2 + контакты + форма |
+| 1 | Hero | background (#FFF8F0) | h1 + subtitle + meta-tags + буллеты + CTA |
+| 2 | О нас | surface-alt (#F5F0EB) | h2 + 3 карточки + CTA |
+| 3 | Продукты/Услуги | background (#FFF8F0) | h2 + 3 категории + CTA |
+| 4 | Ключевая фишка | surface-alt (#F5F0EB) | h2 + 4 stat-блока + CTA |
+| 5 | События/Процесс | background (#FFF8F0) | h2 + 3 карточки + CTA |
+| 6 | Галерея | surface-alt (#F5F0EB) | h2 + сетка фото + CTA |
+| 7 | Отзывы | background (#FFF8F0) | h2 + stats + цитаты + CTA |
+| 8 | FAQ | surface-alt (#F5F0EB) | h2 + аккордеон вопросов |
+| 9 | Контакты + Форма | background (#FFF8F0) | h2 + контакты + форма |
 
 ### Hero Section
 
@@ -235,7 +236,7 @@ section:
 ### Card Grid
 
 - 3 колонки на десктопе, stack на мобильных
-- Карточки с белым бордером 1px, без скруглений
+- Карточки с тёплым бежевым бордером 1px, скруглённые края
 - gap: 12px
 
 ### Meta Labels

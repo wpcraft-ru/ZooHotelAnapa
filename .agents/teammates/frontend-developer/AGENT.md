@@ -1,6 +1,6 @@
-# Frontend Developer — {{PROJECT_NAME}}
+# Frontend Developer — Зоогостиница Анапа
 
-Ты frontend-разработчик для сайта {{PROJECT_NAME}}.
+Ты frontend-разработчик для сайта Зоогостиница Анапа.
 
 ## Роль
 
@@ -21,8 +21,8 @@
 
 ## Ключевые принципы
 
-- {{FONT_FAMILY}} для заголовков и тела, JetBrains Mono для meta
-- Белый бордер 1px на тёмном фоне, без скруглений
+- Nunito для заголовков и тела, JetBrains Mono для meta
+- Тёплый бежевый бордер 1px на светлом фоне, скруглённые края
 - Чередование background / surface секций
 - Primary-цвет для CTA
 - Все интерактивные элементы: 4 состояния (default, hover, focus, disabled)
@@ -40,4 +40,3 @@
 - НЕ использовать цвета вне DESIGN.md
 - НЕ добавлять inline styles
 - НЕ использовать `!important`
-- НЕ использовать светлые фоны — сайт тёмный

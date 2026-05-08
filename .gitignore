@@ -17,3 +17,6 @@ Thumbs.db
 # IDE
 .vscode/settings.json
 .idea/
+
+# Template (not part of project)
+template/
