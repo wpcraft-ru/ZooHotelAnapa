@@ -17,17 +17,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
-          cache: "npm"
-          cache-dependency-path: docs/prototypes/zoohotel-anapa/package-lock.json
-      - run: npm ci
+          node-version: 22
+      - run: npm install --no-package-lock
         working-directory: docs/prototypes/zoohotel-anapa
       - run: npm run build
         working-directory: docs/prototypes/zoohotel-anapa
