@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const base = import.meta.env.BASE_URL || "/";
 ---
 
 <Layout
@@ -11,7 +12,7 @@ import Layout from "../layouts/Layout.astro";
 		<!-- ═══ HEADER ═══ -->
 		<header class="sticky top-0 z-50 border-b border-base-content/20 bg-base-100/95 backdrop-blur px-4 md:px-8">
 			<div class="mx-auto flex h-14 w-full max-w-6xl items-center justify-between">
-				<a href="/" class="font-mono text-sm font-semibold uppercase tracking-widest text-primary">Зоогостиница Анапа</a>
+				<a href={base} class="font-mono text-sm font-semibold uppercase tracking-widest text-primary">Зоогостиница Анапа</a>
 				<nav class="hidden md:flex items-center gap-6 text-sm">
 					<a href="#about" class="hover:text-primary transition-colors">О нас</a>
 					<a href="#services" class="hover:text-primary transition-colors">Услуги</a>
@@ -237,22 +238,22 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 					<div class="grid gap-3 md:grid-cols-3" id="gallery-grid">
 						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
-							<img src="/gallery/house-interior.jpg" alt="Уютный утеплённый домик — собака отдыхает внутри" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/house-interior.jpg" />
+							<img src={`${base}gallery/house-interior.jpg`} alt="Уютный утеплённый домик — собака отдыхает внутри" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full={`${base}gallery/house-interior.jpg`} />
 						</div>
 						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
-							<img src="/gallery/guests.jpg" alt="Довольные гости зоогостиницы — две собаки на пороге" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/guests.jpg" />
+							<img src={`${base}gallery/guests.jpg`} alt="Довольные гости зоогостиницы — две собаки на пороге" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full={`${base}gallery/guests.jpg`} />
 						</div>
 						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
-							<img src="/gallery/territory-1.jpg" alt="Территория зоогостиницы — собака на прогулке у дома" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/territory-1.jpg" />
+							<img src={`${base}gallery/territory-1.jpg`} alt="Территория зоогостиницы — собака на прогулке у дома" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full={`${base}gallery/territory-1.jpg`} />
 						</div>
 						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
-							<img src="/gallery/dog-walk.jpg" alt="Прогулка с собакой в лесу — активный отдых для питомцев" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/dog-walk.jpg" />
+							<img src={`${base}gallery/dog-walk.jpg`} alt="Прогулка с собакой в лесу — активный отдых для питомцев" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full={`${base}gallery/dog-walk.jpg`} />
 						</div>
 						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
-							<img src="/gallery/cat-walk.jpg" alt="Кот на поводке — принимаем и кошек тоже" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/cat-walk.jpg" />
+							<img src={`${base}gallery/cat-walk.jpg`} alt="Кот на поводке — принимаем и кошек тоже" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full={`${base}gallery/cat-walk.jpg`} />
 						</div>
 						<div class="border border-base-content/20 bg-base-100 aspect-square overflow-hidden cursor-pointer gallery-item">
-							<img src="/gallery/territory-2.jpg" alt="Территория зоогостиницы — простор и свежий воздух" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full="/gallery/territory-2.jpg" />
+							<img src={`${base}gallery/territory-2.jpg`} alt="Территория зоогостиницы — простор и свежий воздух" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" data-full={`${base}gallery/territory-2.jpg`} />
 						</div>
 					</div>
 					<p class="text-sm text-base-content/50">
